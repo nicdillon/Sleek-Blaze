@@ -1,8 +1,11 @@
 <script lang="ts">
-    import type { LayoutData } from './$types';
+  import { user, userData } from "$lib/firebase";
     import "../app.css";
-    
-    export let data: LayoutData;
+
+    $user;
+    $userData;
 </script>
 
-<slot />
+<div class="min-h-screen flex flex-col">
+    <slot></slot>
+</div>
