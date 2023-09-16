@@ -4,6 +4,7 @@
   export let data: PageData;
 </script>
 
+<!-- Add meta data to make the site more friendly to search engines. -->
 <svelte:head>
   <title>@{data.username} Links</title>
   <meta name="description" content={data.bio} />

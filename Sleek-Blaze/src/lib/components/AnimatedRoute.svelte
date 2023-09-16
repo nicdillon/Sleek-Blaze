@@ -1,10 +1,11 @@
 <script>
-    import { crossfade, fly } from "svelte/transition";
-    import { page } from "$app/stores";
+  import { fly } from "svelte/transition";
+  import { page } from "$app/stores";
 </script>
 
+<!-- // Everytime the url changes, the contained elements will be deleteDoc, triggering a rerender and the fly animation -->
 {#key $page.url}
-<div in:crossfade={{ duration: 500 }}>
-    <slot/>
-</div>
+  <div in:fly={{ x: "-100%", duration: 500 }}>
+    <slot />
+  </div>
 {/key}
